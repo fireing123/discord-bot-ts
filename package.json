@@ -5,8 +5,8 @@
     "tsc": "^2.0.4"
   },
   "scripts": {
-    "dev": "tsx watch src/index.ts",
     "start": "node dist/index.js",
+    "deploy": "node dist/deploy-commands.js",
     "build": "tsup src/**/* --minify"
   },
   "devDependencies": {
