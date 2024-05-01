@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node dist/index.js",
     "deploy": "node dist/deploy-commands.js",
-    "build": "tsup src/**/* --minify"
+    "build": "npx tsup src/**/* --minify"
   },
   "devDependencies": {
     "@types/node": "^20.12.7",
