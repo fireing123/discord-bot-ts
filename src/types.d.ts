@@ -25,3 +25,9 @@ declare module 'discord.js' {
         commands: Collection<string, SlashCommand>
     }
 }
+
+// process.env as unkown as TypeCheckedEnv 
+// 이미 검사함 undefined 일수 없음 ! 을 제거함
+export interface TypeCheckedEnv {
+
+}

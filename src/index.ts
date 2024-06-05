@@ -1,6 +1,6 @@
 import { Client, Collection } from 'discord.js';
 import { config } from 'dotenv';
-import { executeFile } from './functions';
+import { checkEnv, executeFile } from './functions';
 import { SlashCommand, Event } from './types';
 
 config();
@@ -12,9 +12,10 @@ const client = new Client({
 client.commands = new Collection<string, SlashCommand>();
 
 const login = async (token: string | undefined) => {
-    if (typeof token != 'string') {
-        throw Error('env not include TOKEN or TOKEN type is not string now type is : ' + typeof token);
-    } 
+    checkEnv([
+        'TOKEN',
+        'CLIENT_ID'
+    ]);
 
     await executeFile('/commands', (file) => {
         const command : SlashCommand = file.command;
