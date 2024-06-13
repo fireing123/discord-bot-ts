@@ -27,7 +27,7 @@ declare module 'discord.js' {
 }
 
 // process.env as unkown as TypeCheckedEnv 
-// 이미 검사함 undefined 일수 없음 ! 을 제거함
+// checKEnv에서 이미 검사함 undefined 일수 없음 -> ! 을 제거함
 export interface TypeCheckedEnv {
 
 }
